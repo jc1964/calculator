@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#eef2ef" />
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="wordmark" href="/" aria-label="Calculator home">
+          <span class="wordmark-icon" aria-hidden="true">+</span>
+          <span>ARITHMETIC <span class="wordmark-index">/ 01</span></span>
+        </a>
+        <a class="docs-link" href="/docs">API DOCS <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <main class="main-content">
+        <section class="calculator" aria-labelledby="page-title">
+          <div class="calculator-heading">
+            <div>
+              <p class="eyebrow">EVERYDAY MATH</p>
+              <h1 id="page-title">Calculator</h1>
+            </div>
+            <div class="status" id="status" data-state="ready" role="status" aria-live="polite">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span id="status-text">Ready</span>
+            </div>
+          </div>
+
+          <div class="display" aria-label="Calculator display">
+            <p class="expression" id="expression" aria-live="polite">Ready for a calculation</p>
+            <output class="screen" id="screen" aria-live="polite" aria-label="Current value">0</output>
+          </div>
+
+          <div class="keypad" id="keypad" aria-label="Calculator keypad">
+            <button class="key key-utility" type="button" data-action="clear" aria-label="Clear all">AC</button>
+            <button class="key key-utility" type="button" data-action="backspace" aria-label="Delete last digit">DEL</button>
+            <button class="key key-utility" type="button" data-action="sign" aria-label="Change sign">&plusmn;</button>
+            <button class="key key-operation" type="button" data-operation="divide" aria-label="Divide">&divide;</button>
+
+            <button class="key" type="button" data-digit="7">7</button>
+            <button class="key" type="button" data-digit="8">8</button>
+            <button class="key" type="button" data-digit="9">9</button>
+            <button class="key key-operation" type="button" data-operation="multiply" aria-label="Multiply">&times;</button>
+
+            <button class="key" type="button" data-digit="4">4</button>
+            <button class="key" type="button" data-digit="5">5</button>
+            <button class="key" type="button" data-digit="6">6</button>
+            <button class="key key-operation" type="button" data-operation="subtract" aria-label="Subtract">&minus;</button>
+
+            <button class="key" type="button" data-digit="1">1</button>
+            <button class="key" type="button" data-digit="2">2</button>
+            <button class="key" type="button" data-digit="3">3</button>
+            <button class="key key-operation" type="button" data-operation="add" aria-label="Add">+</button>
+
+            <button class="key key-zero" type="button" data-digit="0">0</button>
+            <button class="key" type="button" data-action="decimal" aria-label="Decimal point">.</button>
+            <button class="key key-equals" type="button" data-action="equals" aria-label="Equals">=</button>
+          </div>
+
+          <footer class="calculator-footer">
+            <span>FOUR OPERATIONS</span>
+            <span class="footer-mark" aria-hidden="true">C / 01</span>
+          </footer>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
